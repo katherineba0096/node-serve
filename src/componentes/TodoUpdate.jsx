@@ -1,7 +1,7 @@
 import {FaEdit} from "react-icons/fa"
 import { useForm } from "../hooks/useform";
 import { useRef, useState } from "react";
-
+import { Button, Input, } from '@chakra-ui/react'
 
 export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 	const { updateDescription, onInputChange } = useForm({
@@ -26,22 +26,21 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 
 	return (
 		<form onSubmit={onSubmitUpdate}>
-			<input
+			<Input
 				type='text'
-				className={`input-update ${
+				className={`${
 					todo.done ? 'text-decoration-dashed' : ''
 				}`}
 				name='updateDescription'
 				value={updateDescription}
 				onChange={onInputChange}
-				placeholder='¿Qué hay que hacer?'
 				readOnly={disabled}
 				ref={focusInputRef}
 			/>
 
-			<button className='btn-edit' type='submit'>
+			<Button className='btn-edit' type='submit'>
 				<FaEdit />
-			</button>
+			</Button>
 		</form>
 	);
 };

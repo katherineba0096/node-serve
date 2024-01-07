@@ -5,31 +5,30 @@
 }
 
 :root {
-	--bgcolor:#f4fdfd;
+	--bgcolor: #f4fdfd;
 	--morado: rgba(218, 136, 221, 0.459);
-	--azul:#4ec9c3;
+	--azul: #4ec9c3;
 	--azul-hover: #48cae4;
 	--eliminar-hover: #48cae4;
 	--verde: #72b881;
-	
+
 }
 
 body {
-	 
+
 	font-family: Poppins;
-	max-width: 1200px;
 	margin: 40px auto;
 	display: flex;
 	justify-content: center;
-	
+
 }
 
 .card-to-do {
-	background: var(--bgcolor);
-	box-shadow: 0px 0px 5px rgba(8, 88, 83, 0.952);
-	padding: 25px;
-	border-radius: 20px;
-	width: 700px;
+	border: 2px solid gray;
+	box-shadow: 0px 0px 15px rgba(8, 88, 83, 0.952);
+	padding: 1rem;
+	border-radius: 10px;
+	margin: 1rem;
 }
 
 h1 {
@@ -37,7 +36,7 @@ h1 {
 }
 
 .counter-todos {
-	margin: 40px 0;
+	margin: 20px 0;
 	display: flex;
 	justify-content: space-around;
 }
@@ -54,8 +53,7 @@ h1 {
 }
 
 ul {
-	
-	margin-top: 50px;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
@@ -86,7 +84,7 @@ ul li form {
 	border: none;
 	outline: none;
 	padding: 10px 20px;
-	box-shadow: 0px 0px 5px rgba(122, 248, 252, 0.76);
+	box-shadow: 0px 0px 5px rgba(122, 248, 252, 0.76) !important;
 	border-radius: 20px;
 	flex: 1;
 	font-family: inherit;
@@ -149,6 +147,7 @@ ul li form {
 
 form {
 	display: flex;
+	flex-direction: row;
 	gap: 20px;
 }
 
